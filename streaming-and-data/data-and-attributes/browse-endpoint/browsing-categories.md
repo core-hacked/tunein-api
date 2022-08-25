@@ -2,7 +2,7 @@
 description: This page documents all browsing categories found on the browse endpoint.
 ---
 
-# 📂 Browsing Categories
+# 🔭 Browsing Categories
 
 | Category | Return Type  | Description                                                                  |
 | -------- | ------------ | ---------------------------------------------------------------------------- |

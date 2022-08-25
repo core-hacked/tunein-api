@@ -14,7 +14,7 @@ Endpoint Information may be incomplete. If you have more information please [con
 
 If you request the base URI, you will receive a list of options you can pick from. (The browse categories) You can achieve the same result by requesting `/browse.ashx` without any GET parameters.
 
-You can select any of these categories to browse further, see [browse categories](../streaming-and-data/data-and-attributes/browse-endpoint/browsing-categories.md).
+You can select any of these categories to browse further, see [browsing categories](../streaming-and-data/data-and-attributes/browse-endpoint/browsing-categories.md).
 
 ### Response
 
@@ -84,12 +84,12 @@ Browse inside of a category. You can also view all categories by requesting the 
 | filter    | l203    | Used by the language category to filter. <mark style="color:yellow;">(Meaning unknown as of now)</mark> |
 
 {% hint style="info" %}
-For all possible parameter values, see [Browse Categories](../streaming-and-data/data-and-attributes/browse-endpoint/browsing-categories.md) or [Browse Location IDs](../streaming-and-data/data-and-attributes/browse-endpoint/browse-location-ids.md).
+For all possible parameter values, see [Browsing Categories](../streaming-and-data/data-and-attributes/browse-endpoint/browsing-categories.md), [Browse Location IDs](../streaming-and-data/data-and-attributes/browse-endpoint/browse-location-ids.md), or [The Filter Parameter](../streaming-and-data/data-and-attributes/browse-endpoint/filter-parameter.md).
 {% endhint %}
 
 ### Response
 
-{% code title="Category local" %}
+{% code title="Category: local" %}
 ```xml
 <opml version="1">
     <head>
@@ -111,9 +111,10 @@ For all possible parameter values, see [Browse Categories](../streaming-and-data
 
 Get the `.m3u` file needed for streaming.&#x20;
 
-| Parameter | Example | Description                                                                         |
-| --------- | ------- | ----------------------------------------------------------------------------------- |
-| id        | s12345  | This is the ID of the tune. You will get these from an outline objects attributes.  |
+| Parameter | Example  | Description                                                                                |
+| --------- | -------- | ------------------------------------------------------------------------------------------ |
+| id        | s12345   | This is the ID of the tune. You will get these from an outline objects attributes.         |
+| sid       | p1234567 | <mark style="color:yellow;">Purpose unknown, used in combination with topics/shows.</mark> |
 
 ### Response
 

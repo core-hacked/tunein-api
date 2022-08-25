@@ -23,4 +23,13 @@ The API is organized into two parts.&#x20;
 
 [<mark style="color:blue;">2. Streaming & Data, like how to read/convert the data, the data types, and how to extract the streaming URL.</mark>](broken-reference)
 
-<mark style="color:blue;">3. Credits, helpful resources & basis for the documentation.</mark>
+<mark style="color:blue;"></mark>[<mark style="color:blue;">3. Credits, helpful resources & basis for the documentation.</mark>](broken-reference)<mark style="color:blue;"></mark>
+
+#### Meaning of different colors within the API Documentation.
+
+| Color                                     | Description                                                                                                                                                   |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <mark style="color:yellow;">Yellow</mark> | Simplified explanation/TL:DR or used as a "warning" due to the elements or parameters etc. not being fully understood or unknown meaning of the said element. |
+| <mark style="color:blue;">Blue</mark>     | Usually representing a link.                                                                                                                                  |
+| <mark style="color:green;">Green</mark>   | Representing something safe.                                                                                                                                  |
+| <mark style="color:red;">Red</mark>       | Representing something unsafe.                                                                                                                                |

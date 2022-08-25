@@ -11,6 +11,8 @@ However, you are still able to make requests using [cURL](https://en.wikipedia.o
 
 All requests are made using `GET` to the endpoint url.
 
+> Although not tested, you should be able to use JavaScript in combination with Node.js.
+
 ### Authentication & Security
 
 Although they have used a same-origin policy, they did not implement any authentication which means you can get started right away.&#x20;
@@ -30,7 +32,7 @@ curl -s -X GET "https://opml.radiotime.com/endpoint.ashx"
 
 ### API Responses
 
-The API always responds with an XML Document which usually looks like this if you made a valid request.
+The API always responds with an XML Document which usually looks something like this if you made a valid request.
 
 {% code title="Response (valid request)" %}
 ```xml
