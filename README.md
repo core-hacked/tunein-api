@@ -3,6 +3,8 @@ description: >-
   This is unofficial documentation of TuneIn's Streaming API, used by them to
   provide web radio streams and podcasts/shows to its users. You are always
   welcome to contribute.
+cover: .gitbook/assets/tunein-api-img-test.png
+coverY: 0
 ---
 
 # 👋 Introduction
