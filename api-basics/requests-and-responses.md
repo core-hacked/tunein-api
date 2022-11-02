@@ -42,7 +42,7 @@ The API always responds with an XML Document which usually looks something like 
         <status>200</status>
     </head>
     <body>
-        <outline attributes="something"/>
+        <outline type="audio" text="OctoStation" URL="http://opml.radiotime.com/Tune.ashx?id=a12345" bitrate="128" reliability="99" guide_id="s45087" subtext="OctoStation" genre_id="g61" formats="mp3" item="station" image="http://cdn-profiles.tunein.com/a12345/images/logoq.png" now_playing_id="a12345" preset_id="a12345"/>
     </body>
 </opml>
 ```
@@ -59,5 +59,51 @@ The API always responds with an XML Document which usually looks something like 
     </head>
     <body> </body>
 </opml>
+```
+{% endcode %}
+
+### Alternative responses
+
+Alternatively, you can add `&render=json` to the end of the request and render it in the json format. By default you will get an XML document.
+
+{% code title="Response (valid request)" %}
+```json
+{
+  "head": { "title": "Some title", "status": "200" },
+  "body": [
+    {
+      "element": "outline",
+      "type": "audio",
+      "text": "OctoStation",
+      "URL": "http://opml.radiotime.com/Tune.ashx?id=a12345",
+      "bitrate": "128",
+      "reliability": "99",
+      "guide_id": "a12345",
+      "subtext": "OctoStation",
+      "genre_id": "g61",
+      "formats": "mp3",
+      "item": "station",
+      "image": "http://cdn-profiles.tunein.com/a12345/images/logoq.png",
+      "now_playing_id": "a12345",
+      "preset_id": "a12345"
+    }
+  ]
+}
+
+```
+{% endcode %}
+
+{% code title="Response (invalid request)" %}
+```json
+{
+  "head": {
+    "title": "Invalid method",
+    "status": "404",
+    "fault": "Invalid method",
+    "fault_code": "api.methodNotFound"
+  },
+  "body": []
+}
+
 ```
 {% endcode %}
