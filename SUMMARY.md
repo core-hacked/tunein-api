@@ -1,9 +1,8 @@
 # Table of contents
 
-- [👋 Introduction](README.md)
-
 ## API Basics
 
+- [👋 Introduction](README.md)
 - [↔ Requests & Responses](api-basics/requests-and-responses.md)
 
 ## Endpoints & Streaming
