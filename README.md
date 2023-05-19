@@ -7,9 +7,6 @@ cover: .gitbook/assets/tunein-api-img-test.png
 coverY: 0
 ---
 
-# Website is currently unreachable due to an issue with Cloudflare, because of my domain change. (Error 1014 | CNAME Cross-User Banned).
-# Please be patient while I resolve the issue. The documentation is currently available here on GitHub.
-
 # 👋 Introduction
 
 {% hint style="info" %}
