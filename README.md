@@ -1,5 +1,3 @@
-# Website temporarily down due to domain change! View the docs on here!
-
 ---
 description: >-
   This is unofficial documentation of TuneIn's Streaming API, used by them to
@@ -8,6 +6,9 @@ description: >-
 cover: .gitbook/assets/tunein-api-img-test.png
 coverY: 0
 ---
+
+# Website is currently unreachable due to an issue with Cloudflare, because of my domain change. (Error 1014 | CNAME Cross-User Banned).
+# Please be patient while I resolve the issue. The documentation is currently available here on GitHub.
 
 # 👋 Introduction
 
