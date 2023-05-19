@@ -6,12 +6,15 @@ description: How to make requests to the Streaming API.
 
 ### Methods of making requests
 
-Sadly, TuneIn has a [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy), that forbids you to access the API via JavaScript.\
-However, you are still able to make requests using [cURL](https://en.wikipedia.org/wiki/CURL), [Postman](https://www.postman.com/), or other such software. This means that you can use PHP and its command execution functions to have a fully web-based radio streaming experience (although server-sided).
+Sadly, TuneIn has a [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy), that forbids you to access the API via JavaScript.\
+However, you are still able to make requests using [cURL](https://en.wikipedia.org/wiki/CURL), [Postman](https://www.postman.com/), or other such software. This means that you can use PHP and its command execution functions to have a fully web-based radio streaming experience (although server-sided) or a custom software client/app.
 
-All requests are made using `GET` to the endpoint url.
+All requests are made to the Base-URI defined in the [Introdcution](../README.md) section, with the endpoints respective
+path appended and HTTP method specified before the path.
 
-> Although not tested, you should be able to use JavaScript in combination with Node.js.
+{% hint style="info" %}
+Keep in mind that the endpoint information may be incomplete or incorrect.
+{% endhint %}
 
 ### Authentication & Security
 
@@ -27,14 +30,18 @@ https://opml.radiotime.com | secure and encrypted.
 An example request using curl could look like the following:
 
 ```bash
+# Docs: GET /endpoint.ashx
 curl -s -X GET "https://opml.radiotime.com/endpoint.ashx"
 ```
+
+{% endcode %}
 
 ### API Responses
 
 The API always responds with an XML Document which usually looks something like this if you made a valid request.
 
 {% code title="Response (valid request)" %}
+
 ```xml
 <opml version="1">
     <head>
@@ -46,9 +53,11 @@ The API always responds with an XML Document which usually looks something like 
     </body>
 </opml>
 ```
+
 {% endcode %}
 
 {% code title="Response (invalid request)" %}
+
 ```xml
 <opml version="1">
     <head>
@@ -60,6 +69,7 @@ The API always responds with an XML Document which usually looks something like 
     <body> </body>
 </opml>
 ```
+
 {% endcode %}
 
 ### Alternative responses
@@ -67,6 +77,7 @@ The API always responds with an XML Document which usually looks something like 
 Alternatively, you can add `&render=json` to the end of the request and render it in the json format. By default you will get an XML document.
 
 {% code title="Response (valid request)" %}
+
 ```json
 {
   "head": { "title": "Some title", "status": "200" },
@@ -89,11 +100,12 @@ Alternatively, you can add `&render=json` to the end of the request and render i
     }
   ]
 }
-
 ```
+
 {% endcode %}
 
 {% code title="Response (invalid request)" %}
+
 ```json
 {
   "head": {
@@ -104,6 +116,6 @@ Alternatively, you can add `&render=json` to the end of the request and render i
   },
   "body": []
 }
-
 ```
+
 {% endcode %}
