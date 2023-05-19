@@ -6,9 +6,9 @@
 
 - [↔ Requests & Responses](api-basics/requests-and-responses.md)
 
-## Streaming & Data
+## Endpoints & Streaming
 
-- [📊 Endpoints, Streaming & Data](endpoints/README.md)
+- [🔗 Endpoints](endpoints/README.md)
   - [🌐 Browse Endpoint](endpoints/browse-endpoint/README.md)
     - [🔭 Browsing Categories](endpoints/browse-endpoint/browsing-categories.md)
     - [🌏 Browse Location IDs](endpoints/browse-endpoint/browse-location-ids.md)

@@ -1,6 +1,6 @@
 ---
 description: >-
-  Endpoint quick links
+  Endpoint quick links and descriptions.
 ---
 
 # 🔗 Endpoints
