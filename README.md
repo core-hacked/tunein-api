@@ -19,19 +19,19 @@ The base URI for all requests is `https://opml.radiotime.com` you will use this 
 
 ## API Organization
 
-The API is organized into two parts.&#x20;
+The API is organized into three parts.
 
-<mark style="color:blue;"></mark>[<mark style="color:blue;">1. The API basics, like the different endpoints, what they do, and how to make requests.</mark>](broken-reference)
+[<mark style="color:blue;">1. The API basics, like this introduction and information on how to get started.</mark> ](./)
 
-[<mark style="color:blue;">2. Streaming & Data, like how to read/convert the data, the data types, and how to extract the streaming URL.</mark>](broken-reference)
+[<mark style="color:blue;">2. T</mark>](broken-reference/)[<mark style="color:blue;">he endpoints, additional information on their response fields/data and how to stream music from the API.</mark>](endpoints/)&#x20;
 
-<mark style="color:blue;"></mark>[<mark style="color:blue;">3. Credits, helpful resources & basis for the documentation.</mark>](broken-reference)<mark style="color:blue;"></mark>
+[<mark style="color:blue;">3. Credits, helpful resources & basis for the documentation.</mark>](broken-reference/)
 
 #### Meaning of different colors within the API Documentation.
 
 | Color                                     | Description                                                                                                                                                   |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <mark style="color:yellow;">Yellow</mark> | Simplified explanation/TL:DR or used as a "warning" due to the elements or parameters etc. not being fully understood or unknown meaning of the said element. |
-| <mark style="color:blue;">Blue</mark>     | Usually representing a link.                                                                                                                                  |
+| <mark style="color:blue;">Blue</mark>     | Usually representing a link or information.                                                                                                                   |
 | <mark style="color:green;">Green</mark>   | Representing something safe.                                                                                                                                  |
 | <mark style="color:red;">Red</mark>       | Representing something unsafe.                                                                                                                                |

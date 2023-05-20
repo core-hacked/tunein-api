@@ -1,26 +1,25 @@
 ---
-description: How to make requests to the Streaming API.
+description: Needed information on how to get started.
 ---
 
-# ↔ Requests & Responses
+# 🤔 Getting Started
 
-### Methods of making requests
+## Making requests and the limitations of the API
 
-Sadly, TuneIn has a [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy), that forbids you to access the API via JavaScript.\
+Sadly, TuneIn has a [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy), that forbids you to access the API via JavaScript.\
 However, you are still able to make requests using [cURL](https://en.wikipedia.org/wiki/CURL), [Postman](https://www.postman.com/), or other such software. This means that you can use PHP and its command execution functions to have a fully web-based radio streaming experience (although server-sided) or a custom software client/app.
 
-All requests are made to the Base-URI defined in the [Introdcution](../README.md) section, with the endpoints respective
-path appended and HTTP method specified before the path.
+All requests are made to the Base-URI defined in the [Introdcution](../) section, with the endpoints respective path appended and HTTP method specified before the path.
 
-{% hint style="info" %}
-Keep in mind that the endpoint information may be incomplete or incorrect.
+## Authentication & Security
+
+Although TuneIn implemented a same-origin policy, they did not implement any authentication which means you can get started right away.
+
+You need to specify the protocol that you want to use (<mark style="color:red;">HTTP</mark>/ <mark style="color:green;">HTTPS</mark>) since there is no automatic redirection to https even if you/the client can fully support an https connection.&#x20;
+
+{% hint style="warning" %}
+Keep in mind that all URLs given as a response by the API will start with <mark style="color:red;">`http://`</mark> no matter which protocol you requested. So you will need to replace <mark style="color:red;">`http://`</mark> with <mark style="color:green;">`https://`</mark> on your end to use <mark style="color:green;">HTTPS</mark>.
 {% endhint %}
-
-### Authentication & Security
-
-Although they have used a same-origin policy, they did not implement any authentication which means you can get started right away.&#x20;
-
-You need to specify the protocol that you want to use (<mark style="color:red;">HTTP</mark>/ <mark style="color:green;">HTTPS</mark>) since there is no automatic redirection to https even if you/the client can fully support an https connection.
 
 ```batch
 http://opml.radiotime.com | not secure by default.
@@ -34,14 +33,11 @@ An example request using curl could look like the following:
 curl -s -X GET "https://opml.radiotime.com/endpoint.ashx"
 ```
 
-{% endcode %}
-
-### API Responses
+## API Responses
 
 The API always responds with an XML Document which usually looks something like this if you made a valid request.
 
 {% code title="Response (valid request)" %}
-
 ```xml
 <opml version="1">
     <head>
@@ -53,11 +49,9 @@ The API always responds with an XML Document which usually looks something like 
     </body>
 </opml>
 ```
-
 {% endcode %}
 
 {% code title="Response (invalid request)" %}
-
 ```xml
 <opml version="1">
     <head>
@@ -69,15 +63,18 @@ The API always responds with an XML Document which usually looks something like 
     <body> </body>
 </opml>
 ```
-
 {% endcode %}
 
-### Alternative responses
+## Alternative responses
 
-Alternatively, you can add `&render=json` to the end of the request and render it in the json format. By default you will get an XML document.
+Alternatively, you can add `&render=json` to the end of the request and render it in the json format. By default you will get an XML document. Other types of rendering have not yet been found. Feel free to add those into the documentation.
+
+```bash
+# Docs: GET /endpoint.ashx | with &render=json added
+curl -s -X GET "https://opml.radiotime.com/endpoint.ashx&render=json"
+```
 
 {% code title="Response (valid request)" %}
-
 ```json
 {
   "head": { "title": "Some title", "status": "200" },
@@ -101,11 +98,9 @@ Alternatively, you can add `&render=json` to the end of the request and render i
   ]
 }
 ```
-
 {% endcode %}
 
 {% code title="Response (invalid request)" %}
-
 ```json
 {
   "head": {
@@ -117,5 +112,4 @@ Alternatively, you can add `&render=json` to the end of the request and render i
   "body": []
 }
 ```
-
 {% endcode %}

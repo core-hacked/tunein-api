@@ -12,7 +12,7 @@ description: Learn about and understand the .M3U extension.
 Although originally designed for audio files, such as [MP3](https://en.wikipedia.org/wiki/MP3), it is commonly used to point media players to audio and video sources, including online sources. M3U was originally developed by [Fraunhofer](https://en.wikipedia.org/wiki/Fraunhofer\_Society) for use with their [Winplay3](https://en.wikipedia.org/wiki/Winplay3) software,[\[4\]](https://en.wikipedia.org/wiki/M3U#cite\_note-4) but numerous media players and software applications now support the format.
 {% endhint %}
 
-> _Sourc_e: [_Wikipedia - M3U_](https://en.wikipedia.org/wiki/M3U)__
+> _Sourc_e: [_Wikipedia - M3U_](https://en.wikipedia.org/wiki/M3U)
 
 ### Simple explanation. <mark style="color:yellow;">(Self-written)</mark>
 
